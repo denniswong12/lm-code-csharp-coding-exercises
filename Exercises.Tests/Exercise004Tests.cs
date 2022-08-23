@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using FluentAssertions;
 using System;
+using NUnit.Framework.Constraints;
 
 namespace Exercises.Tests
 {
@@ -29,5 +30,23 @@ namespace Exercises.Tests
             DateTime expectedResult = new(2052, 10, 3, 1, 46, 39);
             actualResult.Should().Be(expectedResult);
         }
+
+        //Start of additional unit test
+        [Test]
+        public void AddGigaSecond_Should_Return_Result_When_DateTime_Is_In_Min_Value()
+        {
+            DateTime actualResult = Exercise004.AddGigaSecond(DateTime.MinValue);
+            DateTime expectedResult = new(0032, 9, 9, 1, 46, 40);
+            actualResult.Should().Be(expectedResult);
+        }
+
+        [Test]
+        public void AddGigaSecond_Should_Return_Result_With_Future_DateTIme()
+        {
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(2122, 12, 31, 23, 59, 59, 0));
+            DateTime expectedResult = new(2154, 9, 9, 1, 46, 39);
+            actualResult.Should().Be(expectedResult);
+        }
+        //End of additional unit test
     }
 }

@@ -3,10 +3,24 @@ namespace Exercises
 {
     public class Exercise003
     {
-        // Replace the exception statement below with your code!
-        public string[] IceCreamFlavours => throw new NotImplementedException();
+        //define non-changable IceCreamFlavours
+        public static string[] IceCreamFlavours = { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
 
-        // Replace the exception statement below with your code!
-        public int IceCreamCode(string iceCreamFlavour) => throw new NotImplementedException();
+        public int IceCreamCode(string iceCreamFlavour)
+        {
+            if (string.IsNullOrEmpty(iceCreamFlavour))
+                return -1;
+            else
+            {
+
+                for (int i = 0; i < IceCreamFlavours.Length; i++)
+                    if (IceCreamFlavours[i].Equals(iceCreamFlavour))
+                        return i;
+            }
+
+            //return -1 if iceCreamFlavour doesn't exist in IceCreamFlavours
+            return -1;
+        }
+
     }
 }

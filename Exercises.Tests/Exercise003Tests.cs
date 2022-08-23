@@ -47,5 +47,34 @@ namespace Exercises.Tests
 
             Exercise003.IceCreamFlavours.Should().Equal(expected);
         }
+
+        //Start of additional unit tests
+        [Test]
+        public void Given_Empty_GetIceCreamCode_Should_Return_Minus_One()
+        {
+            string iceCreamFlavour = "";
+            int expectedCode = -1;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+
+        [Test]
+        public void Given_NULL_GetIceCreamCode_Should_Return_Minus_One()
+        {
+            string iceCreamFlavour = null;
+            int expectedCode = -1;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+
+        [Test]
+        public void Given_Invalid_Flavour_GetIceCreamCode_Should_Return_Minus_One()
+        {
+            string iceCreamFlavour = "Strawberry";
+            int expectedCode = -1;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+        //End of additional unit tests
     }
 }

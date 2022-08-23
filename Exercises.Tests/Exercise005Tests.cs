@@ -11,7 +11,7 @@ namespace Exercises.Tests
         {
             Exercise005 = new Exercise005();
         }
-
+        
         [Test]
         public void IsPangram_Should_Return_False_For_Empty_Sentence()
         {
@@ -65,5 +65,19 @@ namespace Exercises.Tests
         {
             Exercise005.IsPangram("the 1 quick brown fox jumps over the 2 lazy dogs").Should().Be(true);
         }
+
+        //Start of additional unit tests
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_null_Sentence()
+        {
+            Exercise005.IsPangram(null).Should().Be(false);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_Backslash()
+        {
+            Exercise005.IsPangram("ABCDEF\\GHIJKLMNOPQRSTUVWXYZ").Should().Be(true);
+        }
+        //End of additional unit tests
     }
 }
