@@ -24,18 +24,12 @@ namespace Exercises
         public bool IsFromManchester(Person person)
         {
             //if person is an object with City equals "Manchester"
-            if ( !(person == null) && person.City.Equals("Manchester") )
-                return true;
-            else
-                return false;
+            return !(person == null) && person.City.Equals("Manchester");
         }
 
         public bool CanWatchFilm(Person person, int ageLimit)
         {
-            if (!(person == null) && (person.Age >= ageLimit))
-                return true;
-            else
-                return false;
+            return !(person == null) && (person.Age >= ageLimit);
         }
     }
 }

@@ -9,28 +9,21 @@ namespace Exercises
     {
         public string CapitalizeWord(string word)
         {
-            string result;
-
             if (string.IsNullOrEmpty(word)) //check if word is null or empty 
-                result = word;
+                return word;
             else
             {
                 //Capitalize first letter of the word
-                result = $"{word.Substring(0, 1).ToUpper()}{word.Substring(1)}";
+                return $"{word.Substring(0, 1).ToUpper()}{word.Substring(1)}";
             }
-            return result;
         }
 
         public string GenerateInitials(string firstName, string lastName)
         {
-            string result;
-
             if ( string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) )
-                result = "First name and Last name must not be empty";
+                return "First name and Last name must not be empty";
             else
-                result = $"{firstName.Substring(0,1).ToUpper()}.{lastName.Substring(0,1).ToUpper()}";
-
-            return result;
+                return $"{firstName.Substring(0,1).ToUpper()}.{lastName.Substring(0,1).ToUpper()}";
         }
 
         public double AddVat(double originalPrice, double vatRate)
@@ -49,18 +42,15 @@ namespace Exercises
 
         public string Reverse(string sentence)
         {
-            string result;
-
             if (string.IsNullOrEmpty(sentence))
-                result = sentence;
+                return sentence;
             else
             {
                 //put sentence into a char[] in order to reverse it.
                 char[] arr = sentence.ToCharArray();
                 Array.Reverse(arr);
-                result = new string(arr);
+                return new string(arr);
             }
-            return result;
         }
 
         public int CountLinuxUsers(List<User> users)
