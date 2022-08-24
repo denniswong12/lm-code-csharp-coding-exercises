@@ -68,7 +68,7 @@ namespace Exercises.Tests
 
         //Start of additional unit tests
         [Test]
-        public void IsPangram_Should_Return_True_For_Pangram_With_null_Sentence()
+        public void IsPangram_Should_Return_False_For_Pangram_With_null_Sentence()
         {
             Exercise005.IsPangram(null).Should().Be(false);
         }

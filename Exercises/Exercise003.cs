@@ -12,7 +12,6 @@ namespace Exercises
                 return -1;
             else
             {
-
                 for (int i = 0; i < IceCreamFlavours.Length; i++)
                     if (IceCreamFlavours[i].Equals(iceCreamFlavour))
                         return i;
