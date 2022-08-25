@@ -72,8 +72,6 @@ namespace Exercises.Tests
         [Test]
         public void CountLinuxUsers_Should_Return_Zero_For_No_Linux_Users()
         {
-            // This is using the latest C# language features
-            // This is the same as doing User u1 = new User("Heather", "Windows 10", "Windows");
             User u1 = new("Heather", "Windows 10", "Windows");
             User u2 = new("Paul", "Windows 95", "Windows");
 
@@ -89,8 +87,6 @@ namespace Exercises.Tests
         [Test]
         public void CountLinuxUsers_Should_Return_Correct_Count()
         {
-            // This is using the latest C# language features
-            // This is the same as doing User u1 = new User("Heather", "Windows 10", "Windows");
             User u1 = new("Heather", "Windows 10", "Windows");
             User u2 = new("Paul", "Windows 95", "Windows");
             User u3 = new("Sheila", "CentOS 7", "Linux");

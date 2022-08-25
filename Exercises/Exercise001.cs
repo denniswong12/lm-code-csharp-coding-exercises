@@ -9,11 +9,11 @@ namespace Exercises
     {
         public string CapitalizeWord(string word)
         {
-            if (string.IsNullOrEmpty(word)) //check if word is null or empty 
+            if (string.IsNullOrEmpty(word)) //check if word is null or empty.
                 return word;
             else
             {
-                //Capitalize first letter of the word
+                //capitalize first letter of the word.
                 return $"{word.Substring(0, 1).ToUpper()}{word.Substring(1)}";
             }
         }
@@ -28,10 +28,9 @@ namespace Exercises
 
         public double AddVat(double originalPrice, double vatRate)
         {
-            //if originalPrice or vatRate <0, throw execption with same error message specified in Exercise001Test.cs
+            //if originalPrice or vatRate < 0, throw execption with the error message specified in Exercise001Test.cs.
             if ( originalPrice < 0 )
             {
-                
                 throw new ArgumentException($"Price cannot be negative. Please enter a valid price.");
             } else if ( vatRate < 0 ) {
                 throw new ArgumentException($"VAT cannot be negative. Please enter a valid VAT.");
@@ -55,19 +54,19 @@ namespace Exercises
 
         public int CountLinuxUsers(List<User> users)
         {
-            int result = 0;
+            int numLinuxUser = 0;
 
             if (users == null || users.Count == 0)
-                result = 0;
+                numLinuxUser = 0;
             else
             {
                 foreach(User u in users)
                 {
                     if (u.Type.Equals("Linux"))
-                        result++;
+                        numLinuxUser++;
                 }
             }
-            return result;
+            return numLinuxUser;
         }
     }
 }
