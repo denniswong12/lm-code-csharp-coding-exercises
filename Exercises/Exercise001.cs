@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Exercises.Models;
 using static System.Net.Mime.MediaTypeNames;
+using System.Linq;
 
 namespace Exercises
 {
@@ -54,19 +55,10 @@ namespace Exercises
 
         public int CountLinuxUsers(List<User> users)
         {
-            int numLinuxUser = 0;
-
             if (users == null || users.Count == 0)
-                numLinuxUser = 0;
+                return 0;
             else
-            {
-                foreach(User u in users)
-                {
-                    if (u.Type.Equals("Linux"))
-                        numLinuxUser++;
-                }
-            }
-            return numLinuxUser;
+                return users.Count(n => n.Type == "Linux");
         }
     }
 }
